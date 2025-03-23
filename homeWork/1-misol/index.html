@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tugma bosilganda rangni o'zgartirish</title>
     <style>
-        #colorBox {
+        .colorBox {
             width: 60%;
             height: 200px;
             background-color: lightgray;
@@ -31,9 +31,14 @@
 </head>
 <body>
 
-    <div id="colorBox">Rang o'zgaradi</div>
-    <button onclick="changeColor()">Rangni o'zgartirish</button>
-
+    <main>
+        <section>
+            <form class="js-form" action="#">
+                <div class="colorBox">Rang o'zgaradi</div>
+                <button>Rangni o'zgartirish</button>
+            </form>
+        </section>
+    </main>
     <script src="./index.js"></script>
 
 </body>

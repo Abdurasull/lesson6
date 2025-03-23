@@ -1,13 +1,24 @@
-function countVowels() {
-            let text = document.getElementById("textInput").value.toLowerCase();
-            let vowels = "aeiou";
-            let count = 0;
+let formBox = document.querySelector(".js-form");
+let elInput = formBox.querySelector(".textInput");
+let elP = formBox.querySelector(".result");
 
-            for (let char of text) {
-                if (vowels.includes(char)) {
-                    count++;
-                }
-            }
+function countVowels(elInputVel) {
 
-            document.getElementById("result").innerText = "Unli harflar soni: " + count;
+    let vowels = "aeiou";
+    let count = 0;
+    
+    for (let char of elInputVel) {
+        if (vowels.includes(char)) {
+            count++;
         }
+    }
+    return "Unli harflar soni: " + count;
+}
+
+formBox.addEventListener("submit", (evt) => {
+    evt.preventDefault();
+    elP.textContent = countVowels(elInput.value);
+
+
+})
+
